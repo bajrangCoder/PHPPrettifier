@@ -1,6 +1,6 @@
 {
   "name": "PHPPrettifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Formatter plugin for php",
   "main": "dist/main.js",
   "repository": "https://github.com/bajrangCoder/PyFormatX.git",

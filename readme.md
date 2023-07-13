@@ -2,6 +2,19 @@
 
 **PHPPrettifier** is a versatile and robust plugin designed to effortlessly format your PHP code on **Acode**, making it more readable and maintainable.
 
+<details>
+    <summary><strong>Updates</strong></summary>
+    <br>
+    <details>
+        <summary>
+            <code><strong>v1.0.1</strong></code>
+        </summary>
+        <ul>
+            <li>fixed bugs</li>
+        </ul>
+    </details>
+</details>
+
 ## Usage:
 
 - Install **PHPPrettifier** Plugin from `Acode App > Settings > Plugins > And search here for PHPPrettifier` and install it
