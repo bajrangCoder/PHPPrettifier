@@ -7,6 +7,15 @@
     <br>
     <details>
         <summary>
+            <code><strong>v1.0.2</strong></code>
+        </summary>
+        <ul>
+            <li>fixed bugs</li>
+            <li>improved proformance</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <code><strong>v1.0.1</strong></code>
         </summary>
         <ul>
