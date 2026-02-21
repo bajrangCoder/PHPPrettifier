@@ -37,9 +37,9 @@ class PHPPrettifier {
     async init() {
         acode.registerFormatter(plugin.id, ["php"], async () => {
             try {
-                const { editor, activeFile } = editorManager;
+                const { editor, activeFile, isCodeMirror } = editorManager;
                 const { session } = activeFile;
-                const code = editor.getValue();
+                const code = this.getEditorValue(editor, session, isCodeMirror);
                 const parser = "php";
                 const config = {
                     plugins: [HtmlPlugin, phpPlugin],
@@ -66,7 +66,24 @@ class PHPPrettifier {
         });
     }
 
+    getEditorValue(editor, session, isCodeMirror) {
+        if (isCodeMirror) {
+            return editor?.state?.doc?.toString?.() || session?.getValue?.() || "";
+        }
+        return editor?.getValue?.() || session?.getValue?.() || "";
+    }
+
     setValueToEditor(session, formattedCode) {
+        if (editorManager?.isCodeMirror) {
+            this.setValueToCodeMirror(formattedCode, session);
+            return;
+        }
+
+        if (!session?.getUndoManager) {
+            session?.setValue?.(formattedCode);
+            return;
+        }
+
         const { $undoStack, $redoStack, $rev, $mark } = Object.assign(
             {},
             session.getUndoManager()
@@ -77,6 +94,22 @@ class PHPPrettifier {
         undoManager.$redoStack = $redoStack;
         undoManager.$rev = $rev;
         undoManager.$mark = $mark;
+    }
+
+    setValueToCodeMirror(formattedCode, session) {
+        const { editor } = editorManager;
+        if (editor?.state && typeof editor.dispatch === "function") {
+            editor.dispatch({
+                changes: {
+                    from: 0,
+                    to: editor.state.doc.length,
+                    insert: formattedCode,
+                },
+            });
+            return;
+        }
+
+        session?.setValue?.(formattedCode);
     }
 
     async destroy() {

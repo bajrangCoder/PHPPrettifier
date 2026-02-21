@@ -2,9 +2,11 @@
   "id": "bajrangcoder.phpprettifier",
   "name": "PHPPrettifier",
   "main": "dist/main.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "readme": "readme.md",
   "icon": "icon.png",
+  "license": "MIT",
+  "keywords": ["php", "prettifier", "formatter"],
   "files": [],
   "minVersionCode": 292,
   "author": {

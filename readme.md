@@ -7,6 +7,14 @@
     <br>
     <details>
         <summary>
+            <code><strong>v1.0.3</strong></code>
+        </summary>
+        <ul>
+            <li>added codemirror support</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <code><strong>v1.0.2</strong></code>
         </summary>
         <ul>
@@ -30,7 +38,7 @@
 - After that set it as default for Php files from `Acode App > Settings > Formatter` and search for **PHP** and and select `BajrangCoder.PHPPrettifier` from opened select box.
 - And for formatting your code :
   - Open your any php file
-  - from haeder click ✏️ and select format and it will format your code.
+  - from header click ✏️ and select format and it will format your code.
 
 ### How to change formatter configuration?
 
