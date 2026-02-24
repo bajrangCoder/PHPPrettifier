@@ -54,6 +54,7 @@ If you find **PHPPrettifier** useful, please consider giving us a star on our [G
 - Effortlessly formats PHP code to enhance readability and maintainability.
 - Uses the powerful code formatter, Prettier, to ensure consistent code styling.
 - Customizable formatting options to tailor the output to your specific preferences.
+- Works in both codemirror and acr
 
 ## Acknowledgements:
 
